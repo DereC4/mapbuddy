@@ -98,10 +98,11 @@ async def map(ctx):
                 time.sleep(2)
                 pg.hotkey('win','up')
                 pg.hotkey('ctrl','g')
-                pg.write('-482')
+                pg.write('-472')
                 pg.hotkey('tab')
-                pg.write('98')
+                pg.write('100')
                 pg.hotkey('enter')
+                pg.hotkey('ctrl','t')
 ##                await ctx.send("Fullscreened and grabbed world coords for screenshot from MCA visualization")
 ##                await ctx.send("Say :cheese:!")
                 time.sleep(3)
@@ -135,4 +136,4 @@ async def on_message(message):
                 if not message.author.bot:
                         await channel.send('hi')"""
 
-client.run("NDAzMjQ4NDYxNzMyMTE4NTI4.Wl-QZQ._ByP1XRZgE2wuYkUB0VKpE0xl4s")
+client.run("NDAzMjQ4NDYxNzMyMTE4NTI4.Wl-QZQ.sDYSFJo-Sp1VltfOKlVGSnXs55s")
