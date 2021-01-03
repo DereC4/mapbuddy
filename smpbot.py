@@ -7,6 +7,8 @@ from discord.ext import commands
 client = commands.Bot(command_prefix="d!")
 screenWidth, screenHeight = pg.size()
 pg.PAUSE = 0.5
+with open('token.txt') as tk:
+        tk421 = tk.readline()
 
 @client.event
 async def on_ready():
@@ -136,4 +138,4 @@ async def on_message(message):
                 if not message.author.bot:
                         await channel.send('hi')"""
 
-client.run("NDAzMjQ4NDYxNzMyMTE4NTI4.Wl-QZQ.sDYSFJo-Sp1VltfOKlVGSnXs55s")
+client.run(tk421)
