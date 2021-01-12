@@ -22,7 +22,9 @@ async def testmapcommand(ctx):
                 await ctx.send("Moved Mouse!")"""
                 r"""subprocess.call(['java', '-jar', r'C:\Users\noi01\Documents\mcaselector-1.12.3.jar'])"""
                 pg.hotkey('win')
-                pg.typewrite('mcaselector\n', 0.03)
+                pg.typewrite('mcaselector-1.13.3.jar', 0.03)
+                time.sleep(0.5)
+                pg.press('enter')
                 await ctx.send(r"Opened C:\Users\noi01\Documents\mcaselector-1.13.3.jar")
                 time.sleep(1)
                 pg.keyDown('ctrl')
@@ -73,7 +75,7 @@ async def map(ctx):
                 await ctx.send("Moved Mouse!")"""
                 r"""subprocess.call(['java', '-jar', r'C:\Users\noi01\Documents\mcaselector-1.12.3.jar'])"""
                 pg.hotkey('win')
-                pg.typewrite('mcaselector\n', 0.03)
+                pg.typewrite('mcaselector', 0.1)
 ##                await ctx.send(r"Opened C:\Users\noi01\Documents\mcaselector-1.13.3.jar")
                 time.sleep(1)
                 pg.keyDown('ctrl')
