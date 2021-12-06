@@ -104,6 +104,32 @@ async def map(ctx):
                 pg.hotkey('ctrl','r')
                 time.sleep(3)
                 im = pg.screenshot('MCA.png', region=(16,54, 1850, 969))
+                time.sleep(1)
+
+                #lower section
+                pg.hotkey('ctrl','g')
+                pg.write('-127')
+                pg.hotkey('tab')
+                pg.write('750')
+                pg.hotkey('tab')
+                pg.hotkey('enter')
+                pg.scroll(-2)
+                pg.hotkey('enter')
+                time.sleep(3)
+                im2 = pg.screenshot('MCA2.png', region=(16,54, 1850, 969))
+                time.sleep(1)
+
+                #upper section
+                pg.hotkey('ctrl','g')
+                pg.write('-127')
+                pg.hotkey('tab')
+                pg.write('-500')
+                pg.hotkey('tab')
+                pg.hotkey('enter')
+                pg.scroll(-2)
+                pg.hotkey('enter')
+                time.sleep(3)
+                im3 = pg.screenshot('MCA3.png', region=(16,54, 1850, 969))
                 pg.hotkey('alt','f4')
                 time.sleep(1)
         else:
@@ -112,13 +138,24 @@ async def map(ctx):
         ulworldfile = discord.File("ul_world.png")
         embed=discord.Embed(title="The Community", color=0xffae00)
      #   embed.set_image(url="attachment://ul_world.png")
-        """embed.set_thumbnail(url="https://i.imgur.com/Hga1pAM.png")
-        embed.set_image(url="http://dl.dropboxusercontent.com/s/2ezj4vckv2dzgak/ul_world.png?dl=0")"""
         mcamap=discord.Embed(title="MCA Map", color=0xffae00)
         mcamap.set_image(url="attachment://mca.png")
-        """mcamap.set_image(url="http://dl.dropboxusercontent.com/s/mlzx10v8da0i0lk/mcamap.png?dl=0")"""
         await ctx.message.delete()
      #   await ctx.send(file = ulworldfile, embed=embed)
+        await ctx.send(file = mcafile, embed = mcamap)
+        
+        mcafile = discord.File("mca2.png")
+        embed=discord.Embed(title="Upper Section", color=0xffae00)
+     #   embed.set_image(url="attachment://ul_world.png")
+        mcamap=discord.Embed(title="Northern Section", color=0xffae00)
+        mcamap.set_image(url="attachment://mca1.png")
+     #   await ctx.send(file = ulworldfile, embed=embed)
+        await ctx.send(file = mcafile, embed = mcamap)
+
+        mcafile = discord.File("mca3.png")
+        embed=discord.Embed(title="Upper Section", color=0xffae00)
+        mcamap=discord.Embed(title="Lower Section", color=0xffae00)
+        mcamap.set_image(url="attachment://mca2.png")
         await ctx.send(file = mcafile, embed = mcamap)
 
 """@client.event
